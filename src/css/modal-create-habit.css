@@ -1,0 +1,169 @@
+@keyframes anim {
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+#modalBackground{
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+#modalContent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    padding: 32px;
+    gap: 32px;
+    width: 90%;
+    max-width: 318px;
+    border-radius: 8px;    
+    transition: 0.5s;
+    animation-name: anim;
+    animation-duration: 0.5s;
+}
+
+#modalContent__success{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #E6F8EE;
+    border: solid 2px #56CF8E;
+    padding: 32px;
+    gap: 32px;
+    width: 70%;
+    max-width: 250px;
+    border-radius: 8px;    
+    transition: 0.5s;
+    animation-name: anim;
+    animation-duration: 0.5s;
+}
+
+#modalContent__failure{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #E64445;
+    border: solid 2px #F03839;
+    color: #E9ECEF;
+    padding: 32px;
+    gap: 32px;
+    width: 70%;
+    max-width: 250px;
+    border-radius: 8px;    
+    transition: 0.5s;
+    animation-name: anim;
+    animation-duration: 0.5s;
+}
+
+#modalHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+#modalFormCreateHabit{
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.modalContent__modalHeader--modalLabel{
+    left: 0%;
+    right: 91.32%;
+    top: 0%;
+    bottom: 72.13%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #343A40;
+}
+
+.modalContent__modalHeader--modalTitle{
+    /* position: absolute; */
+    width: 114px;
+    height: 24px;
+    left: 32px;
+    top: 38px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #212529;
+}
+
+.modalContent__modalFormCreateHabit--modalLabel{
+    left: 0%;
+    right: 91.32%;
+    top: 0%;
+    bottom: 72.13%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #343A40;
+}
+
+.modalContent__modalFormCreateHabit--modalInput{
+    background: #F1F3F5;
+    border: solid #F1F3F5;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.modalContent__modalFormCreateHabit--optionText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #343A40;
+}
+
+input:required:invalid {
+    border-color: #c00000;
+  }
+
+.modalContent__modalFormCreateHabit--insertButton{
+    padding: 10px;
+    background: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 3px;
+    color: #FFFFFF
+}
+
+.modalContent__modalHeader--closeButton{
+    background-color: #FFFFFF;
+    border: none;
+    color: #ADB5BD;
+}
+
+@media  screen and ( min-width: 768px) {
+    #modalContent{
+        padding: 25px;
+        gap: 25px;
+        width: 40%;
+        max-width: 250px;
+    }
+
+
+
+
+}

@@ -4,7 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <title>Kenzie Habit</title>
   </head>
-  <body></body>
+  <body>
+    <main class="home">
+      <section class="container-login">
+        <div class="container-text">
+          <h1 class="container-text__tittle">KenzieHabit</h1>
+          <p class="container-text__subtitle">
+            If you are going to use a passage of Lorem Ipsum
+          </p>
+          <p class="container-text__message">
+            you need to be sure there isn't anything
+          </p>
+        </div>
+      </section>
+
+      <section class="container-form">
+        <form action="" class="form">
+          <h2 class="container-form__text-login">Login</h2>
+          <label class="container-form__user">Usuário</label>
+          <input
+              class="container-form__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+          />
+          <label class="container-form__password">Senha</label>
+          <input
+              class="container-form__input"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Digitar minha senha"
+          />
+          <button type="submit" class="container-form__button">Entrar</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="./src/scripts/index.scripts.js"></script>
+  </body>
 </html>

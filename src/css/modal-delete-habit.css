@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100vh;
+}
+@keyframes anim {
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+.container{
+    height: 122vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.container__box{
+    
+    width: 17rem;
+    height: 25rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(255, 255, 255, 1) ;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    animation-name: anim;
+    animation-duration: 0.5s;
+}
+.container__header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 98%;
+    height: 1.7rem;
+
+}
+.container__header h2{
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    margin-left: 2rem;
+    letter-spacing: -1px;
+}
+#btnCloseDelete{
+    font-size: 1rem;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0px;
+    background-color:transparent;
+    border: none;
+    color:rgb(173, 181, 189);
+    margin-right: 1.5rem;
+    cursor: pointer;
+
+}
+
+.container__content{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto 0 auto;
+    gap: 0.7rem;
+    width: 85%;
+    height: 2rem;
+}
+.container__content h2{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+.container__content p{
+    color:  #343A40;
+    font-size: 13px;
+    margin-top: 0;
+}
+
+.container__buttons {
+    width: 85%;
+    height: 40%;
+    display: flex;
+    height: 60%;
+    margin: 45px auto;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+#cancel{
+    padding: 10px;
+    width: 10rem;
+    background: #eaf2f9;
+    border: 2px solid #eaf2f9;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#cancel:hover{
+    background-color: #b8d9f6;
+    border: 2px solid #b8d9f6;
+
+}
+#confirm{
+    width:13rem ;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    background: #E64445;
+    border: 2px solid #E64445;
+    border-radius: 4px;  
+    cursor: pointer;       
+}
+#confirm:hover{
+    background-color: #ef8585;
+    border: 2px solid #ef8585;
+
+}
+@media (min-width:375px ){
+    .container__box{
+        width: 20rem;
+        height: 25rem;
+    }
+    .container__buttons{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+@media (min-width: 460px){
+    .container__box{
+        width: 28rem;
+        height: 20rem;
+        /* width: 17rem;
+        height: 25rem; */
+    }
+    .container__header{
+        margin-top: 3rem;
+    }
+    .container__header h2{
+        font-size: 20px;
+    }
+    .container__content h2 {
+        font-size: 18px;
+    }
+    .container__content p{
+        font-size: 15px;
+    }
+    .container__buttons{
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    #btnCloseDelete {
+        margin-top: 4px;
+    }
+
+
+
+}

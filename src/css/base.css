@@ -1,0 +1,27 @@
+
+:root {
+    --magenta: #BC00FF;
+    --magenta-dark:#E064CC;
+
+    --cold-blue: #415AF3;
+    --medium-blue: #4150D2;
+    --blue-light: #E9ECEF;
+    --blue:#540073;
+
+    --light-shade-cyan-blue: #D7E4FB;
+    --very-light-cyan-blue: #F1F3F5;
+    --very-very-light-cyan-blue:#F8F9FA;
+    --blue-cyan:#343A40;
+    --blue-cyan-dark:#212529;
+    --blue-cyan-light: #ADB5BD;
+    
+    --white: #FFFFFF;
+    
+    --green: #56CF8E;
+
+    --red:#E64445;
+    --red-dark: #F03839;
+
+    --font-base: 'Inter', sans-serif;
+
+}

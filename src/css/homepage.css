@@ -1,0 +1,608 @@
+:root{
+    --brand-1: #415AF3;
+    --brand-2: #4150D2;
+    --brand-3: #D7E4FB;
+    --grey-1: #212529;
+    --grey-2:  #343A40;
+    --grey-3:  #ADB5BD;
+    --grey-4:  #E9ECEF; 
+    --grey-5:   #F1F3F5;
+    --grey-6:   #F8F9FA;
+}
+
+
+@keyframes opa {
+    from{
+        /* transform: translateY(300px); */
+        opacity: 0;
+    }
+
+    to{
+        /* transform: translateY(0px); */
+        opacity: 1;
+    }
+}
+
+@keyframes left {
+    
+    from{
+        transform: translatex(-40px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes right {
+    
+    from{
+        transform: translatex(40px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fly {
+
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+/* header */
+header{
+    display: flex;
+    width: 100%;
+}
+
+.header__homePage{
+    margin: 0.8rem;
+
+}
+
+.header__userInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__mainPicture{
+    color: var(--brand-1);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+
+    animation-name: fly;
+    animation-duration: 0.5s;
+
+}
+
+
+.header__avatarUser{
+    width: 2rem;
+    border-radius: 50%;
+    height: 2rem;
+
+    animation-name: right;
+    animation-duration: 0.5s;
+}
+
+.dropDown{
+    display: none;
+    position: absolute;
+    width: 13rem;
+    height: 7rem;
+    top: 53px;
+    left: 10%;
+    flex-direction: column;
+    margin-top: 1rem;
+    border: solid 1px var(--grey-3);
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    animation-name: fly;
+    animation-duration: 0.2s;
+}
+
+.userinfo__container{
+    width: 86px;
+    height: 71px;
+    position: absolute;
+}
+
+.userinfo__container:hover .dropDown{
+    display: flex;
+}
+
+/* .dropDown>button{
+    border: none;
+    background-color: var(--grey-6);
+    color: var(--grey-2);
+    width: 9rem;
+    height: 2rem;
+} */
+
+.dropDown__editar{
+    border: none;
+    background-color: var(--grey-5);
+    color: var(--grey-2);
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 4px;
+}
+
+.dropDown__Logout{
+    border: none;
+    background-color: white;
+    color: var(--grey-2);
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 4px;
+}
+
+.dropDown__editar>img{
+    margin-right: 20px;
+}
+
+.dropDown__Logout>img{
+    margin-right: 20px;
+}
+
+/* main */
+
+.userinfo{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;;
+    background-color: var(--brand-2);
+    width: 100%;
+    height: 7rem;
+}
+
+.userinfo__userName{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+    width: 100%;
+
+    animation-name: right;
+    animation-duration: 0.5s;
+}
+
+.userinfo__Avatar{
+    margin-left: 1rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+
+    animation-name: left;
+    animation-duration: 0.5s;
+}
+
+
+/* main content */
+
+.main__content{
+    width: 100%;
+
+    animation-name: opa;
+    animation-duration: 0.5s;
+
+}
+
+.main__title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem; 
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.main__filtersButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    margin-top: 1.5rem;
+}
+
+.main__filterButtonAll{
+    border: none;
+    background-color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+.main__filterButtonFinish{
+    
+    border: none;
+    background-color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+.main__filterButtonNew{
+    background-color: var(--brand-1);
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    width: 5rem;
+    height: 1.8rem;
+    border-radius: 4px;
+}
+
+.main__titleContent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 1rem 0 1rem;
+    margin-left: 0.1rem;
+    opacity: 50%;
+    border-bottom: solid 1px var(--grey-3);
+    height: 2rem;
+}
+
+.main__titleTitle{
+    margin-left: 5%;
+    width: 80%;
+}
+
+.main__titleDescription{
+    display: none;
+
+}
+
+.main__titleTitleCategory{
+    display: none;
+}
+
+.main__titleContent>p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* .main__contentList{
+} */
+
+.main__data{
+    width: 98%;
+    height: 45vh;
+    overflow: scroll;
+}
+.main__datali{
+    background-color: var(--grey-4);
+
+}
+
+
+
+.main__dataTitle{
+    margin-left: 15%;
+    width: 90%;
+}
+
+.main__dataliCheck{
+    background-color: #56CF8E;
+    background-image: url(../assets/img/check.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 16px;
+    border: solid 1px var(--grey-3);
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.4rem;
+}
+
+.main__dataCheck{
+    border: solid 1px var(--grey-3);
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.4rem;
+}
+
+.main__data>li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 3rem;
+    border-bottom: solid 1px var(--grey-3);
+}
+
+.main__dataDescription{
+    display: none;
+}
+
+.main__dataCategory{
+    display: none;
+    color: var(--brand-1);
+    font-family: 'Inter';
+     font-style: normal;
+      font-weight: 500;
+       font-size: 1rem;
+        line-height: 22px;
+}
+
+.main__data>li>p{
+    overflow: hidden;
+}
+
+.main__dataEdit{
+    border: none;
+    background-color: #F1F3F5;
+    margin-right: 1rem;
+}
+
+.main__dataEdit>img{
+    width: 10px;
+    background-color: #F1F3F5;
+}
+
+.div__loadMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__loadMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 28px;
+    gap: 10px;
+
+    position: absolute;
+    width: 152px;
+    height: 32px;
+    width: 10rem;
+    height: 3rem;
+    margin-top: 7rem;
+    border: none;
+    color: white;
+    background-color: var(--brand-1);
+}
+
+@media screen and (min-width: 700px) {
+
+    .main__dataTitle {
+        margin-left: 10%;
+        width: 90%;
+}
+
+@media  screen and ( min-width: 900px) {
+    .header__homePage{
+        width: 90%;
+        width: 80%;
+        margin-left: 8rem;
+    }
+
+    .userinfo{
+        padding-left: 7rem;
+        gap: 20px;
+    }
+
+    .main__data{
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
+    .main__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 82%;
+        margin-left: 7rem;
+    }
+
+    .main__filtersButton{
+        gap: 20px;
+    }
+
+    .main__titleContent{
+        height: 3rem;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .main__contentList{
+        border: 1px solid var(--grey-3);
+        width: 80%;
+        margin-left: 8rem;
+        margin-top: 1rem;
+    }
+
+    .main__titleTitle{
+        margin-left: 2%;
+    }
+
+    .main__titleDescription{
+        display: block;
+        margin-left: 20%;
+    }
+
+    .main__titleTitleCategory{
+        display: block;
+        margin-left: 35%;
+    }
+
+    .main__titleEdit{
+        margin-left: 6%;
+    }
+
+    .main__data>li{
+        width: 100%;
+    }
+
+    .main__dataTitle{
+        margin-left: 3rem;
+        width: 14%;
+    }
+
+    .main__dataDescription{
+        display: block;
+        margin-left: 6rem;
+        width: 38%;
+    }
+
+    .main__dataCategory{
+        display: block;
+        background-color: var(--brand-3);
+        width: 6vw;
+        height: 3vh;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 3rem;
+    }
+
+    .main__dataEdit{
+        margin-left: 4rem;
+    }
+
+    .div__loadMore{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button__loadMore{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 28px;
+        gap: 10px;
+
+        position: absolute;
+        width: 152px;
+        height: 32px;
+        width: 10rem;
+        height: 3rem;
+        margin-top: 7rem;
+        border: none;
+        color: white;
+        background-color: var(--brand-1);
+    }
+
+}
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 14%;
+    }
+}
+
+@media screen and (min-width: 1070px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 18%;
+    }
+}
+
+
+@media screen and (min-width: 1124px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 24%;
+    }
+}
+
+@media screen and (min-width: 1324px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 28%;
+    }
+}
+
+@media screen and (min-width: 1424px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1524px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1624px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 32%;
+    }
+}
+
+@media screen and (min-width: 1724px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 34%;
+    }
+}
+
+@media screen and (min-width: 1824px) {
+    .main__dataTitle {
+        margin-left: 3rem;
+        width: 34%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .main__dataTitle {
+        margin-left: 4rem;
+        width: 37%;
+    }
+
+}
+
